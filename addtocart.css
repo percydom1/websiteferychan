@@ -14,7 +14,7 @@ body{
 .header{
     height: 80px;
     width : 70%;
-    background-color: goldenrod;
+    background-color: rgb(8, 222, 230);
     border-radius: 3px;
     margin: 30px 0px;
     display: flex;
@@ -23,9 +23,10 @@ body{
     padding: 15px;
 }
 .header .logo{
-    font-size: 30px;
+    font-size: 40px;
     font-weight: bold;
     color: white;
+    font-family: 'Courier New', Courier, monospace;
 }
 .cart{
     display: flex;
@@ -37,7 +38,7 @@ body{
     width: 80px;
 }
 .fa-solid{
-    color: goldenrod;
+    color: rgb(22, 19, 19);
 }
 .cart p{
     height: 22px;
@@ -46,7 +47,7 @@ body{
     align-items: center;
     justify-content: center;
     border-radius: 22px;
-    background-color: goldenrod;
+    background-color: rgb(22, 19, 19);
     color: white;
 }
 .container{
@@ -69,13 +70,13 @@ body{
     text-align: center;
 }
 .head{
-    background-color: goldenrod;
+    background-color: green;
     border-radius: 3px;
-    height: 40px;
+    height: 45px;
     padding: 10px;
     margin-bottom: 20px;
     color: white;
-    display: flex;
+    display: inline-flexbox;
     align-items: center;
 }
 .foot{
@@ -83,7 +84,7 @@ body{
     justify-content: space-between;
     margin: 20px 0px;
     padding: 10px;
-    border-top: 1px solid #333;
+    border-top: 1px solid black;
 }
 .box{
     display: flex;
@@ -125,7 +126,7 @@ button{
     position: relative;
     border: none;
     border-radius: 5px;
-    background-color: goldenrod;
+    background-color: greenyellow;
     padding: 7px 25px;
     cursor: pointer;
     color: white;
@@ -160,4 +161,39 @@ button:hover{
 .fa-trash:hover{
     cursor: pointer;
     color: #333;
+}
+.checkout-form {
+    width: 100%;
+    background-color: goldenrod(202, 10, 10);
+    padding: 20px;
+    margin-top: 30px;
+    border-radius: 5px;
+}
+.checkout-form h3 {
+    margin-bottom: 15px;
+}
+.checkout-form label {
+    display: block;
+    margin: 10px 0 5px;
+}
+.checkout-form input, 
+.checkout-form textarea, 
+.checkout-form select {
+    width: 100%;
+    padding: 8px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+}
+.checkout-form button {
+    margin-top: 15px;
+    background-color: green;
+    color: white;
+    padding: 10px;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.checkout-form button:hover {
+    background-color: darkgreen;
 }
