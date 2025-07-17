@@ -80,3 +80,41 @@ function displaycart(a) {
         }).join('');
     }
 }
+function prosesPembayaran() {
+    let nama = document.getElementById("nama").value;
+    let alamat = document.getElementById("alamat").value;
+    let pengiriman = document.getElementById("pengiriman").value;
+
+    if (cart.length == 0) {
+        alert("Keranjang masih kosong!");
+        return;
+    }
+
+    if (nama === "" || alamat === "") {
+        alert("Mohon lengkapi data pengiriman!");
+        return;
+    }
+
+    let ongkir = 0;
+    if (pengiriman === "jne") ongkir = 0.5;
+    if (pengiriman === "jnt") ongkir = 0.5;
+    if (pengiriman === "gosend") ongkir = 0.5;
+
+    let totalHarga = cart.reduce((acc, item) => acc + item.price, 0);
+    let totalBayar = totalHarga + ongkir;
+
+    alert(
+        `Terima kasih, ${nama}!\n\n` +
+        `Total belanja: ${totalHarga}.000\n` +
+        `Ongkir (${pengiriman.toUpperCase()}): ${ongkir}\n` +
+        `Total yang harus dibayar: ${totalBayar}.000\n\n` +
+        `Pesanan akan dikirim ke: ${alamat}`
+    );
+
+    // Reset data
+    cart = [];
+    displaycart();
+    document.getElementById("nama").value = "";
+    document.getElementById("alamat").value = "";
+    document.getElementById("pengiriman").value = "jne";
+}
